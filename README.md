@@ -9,7 +9,7 @@
 
 
 ## about installation
-<li>after taking a pull from repository first migrate the database and then run ExamQuestionseeder.php seeder file for inserting role related questions</li>
+<li>after taking a pull from repository first migrate the database and then run <b>ExamQuestionseeder.php </b>seeder file for inserting role related questions</li>
 <li>register users using /register URL  and then login that user will redirect to homepage</li>
 <li>after you can apply the job through given apply job form also attempt the test from dashboard </li>
 <li>result will display on dashboard</li>
