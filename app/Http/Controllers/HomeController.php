@@ -49,6 +49,7 @@ class HomeController extends Controller
     /* dispay exam form */
     public function exam($role){
         $viewdata = [];
+        $role = str_replace('-',' ',$role);
         $viewdata['questions'] =  DB::table('question_answer_table')->where('question_answer_table.job_role',$role)->get();
         $viewdata['role'] = $role;
         return view('exam',$viewdata);

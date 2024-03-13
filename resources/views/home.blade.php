@@ -42,8 +42,10 @@
                         <th scope="row">1</th>
                         <td> @if(!empty($job->job_role)){{$job->job_role}} @endif</td>
                         <td> @if(!empty($job->created_at)){{date('Y-m-d',strtotime($job->created_at))}} @endif</td>
+                       
                         @if(count($data) == 0 && !empty($job->job_role))
-                            <td><a class="btn btn-primary" href="{{ route('exam',$job->job_role) }}">{{ __('Start Exam') }}</a></td>
+                        @php $role = str_replace(' ','-',$job->job_role) @endphp
+                            <td><a class="btn btn-primary" href="{{ route('exam',$role) }}">{{ __('Start Exam') }}</a></td>
                         @endif
                         </tr>
                        
